@@ -1,0 +1,80 @@
+﻿/* Обновленные стили для темной темы */
+html, body {
+    background-color: #2d2d2d; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+}
+
+nav {
+    background-color: #364f6b; /* Цвет фона навбара */
+}
+
+.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #4cb5f5; /* Цвет ссылок */
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #364f6b; /* Цвет кнопок */
+    border-color: #283d54;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #ffffff;
+    background-color: #364f6b; /* Цвет активных ссылок */
+    border-color: #283d54;
+}
+
+.border-top {
+    border-top: 1px solid #4f4f4f; /* Цвет верхней границы */
+}
+
+.border-bottom {
+    border-bottom: 1px solid #4f4f4f; /* Цвет нижней границы */
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #364f6b; /* Цвет футера */
+    color: #ffffff;
+}
+
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-card {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    width: 300px;
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .contact-card h2 {
+        margin: 0;
+    }
+
+    .contact-card p {
+        margin: 5px 0;
+    }

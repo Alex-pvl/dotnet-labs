@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book>
+    <Id>8</Id>
+    <Title>Гордость и предубеждение</Title>
+    <Author>Джейн Остен</Author>
+    <Count>10</Count>
+  </Book>
+  <Book>
+    <Id>9</Id>
+    <Title>1984</Title>
+    <Description>Антиутопия</Description>
+    <Author>Джордж Оруэлл</Author>
+    <Count>100</Count>
+  </Book>
+  <Book>
+    <Id>10</Id>
+    <Title>Великий Гэтсби</Title>
+    <Author>Ф. С. Фицджеральд</Author>
+    <Count>12</Count>
+  </Book>
+  <Book>
+    <Id>11</Id>
+    <Title>451° по Фаренгейту</Title>
+    <Description>читал "плохие" книги</Description>
+    <Author>Рей Бредбери</Author>
+    <Count>1</Count>
+  </Book>
+  <Book>
+    <Id>12</Id>
+    <Title>Звездные войны 1. Скрытая угроза</Title>
+    <Description>Ваще крутяк бомба, 2 раза смотрел</Description>
+    <Author>Джордж Лукас</Author>
+    <Count>32</Count>
+  </Book>
+</ArrayOfBook>

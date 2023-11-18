@@ -1,0 +1,30 @@
+﻿@model Lab4.Models.AddBookViewModel
+
+@{
+    ViewData["Title"] = "Добавить книгу";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">Название</label>
+        <input type="text" class="form-control" asp-for="Title" minlength="1" maxlength="50">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Автор</label>
+        <input type="text" class="form-control" asp-for="Author" minlength="2" maxlength="50">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Описание</label>
+        <input type="text" class="form-control" asp-for="Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Количество экземпляров</label>
+        <input type="number" class="form-control" asp-for="Count" min="1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>

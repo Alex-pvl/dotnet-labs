@@ -1,0 +1,57 @@
+﻿@model List<Lab4.Models.Book>
+
+@{
+    ViewData["Title"] = "Библиотека";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="mb-3">
+    <a href="@Url.Action("Add", "Library")" class="btn btn-primary">Добавить книгу</a>
+    <form method="post" action="@Url.Action("DeleteAllBooks", "Library")" style="display: inline;">
+        <input type="submit" value="Удалить все книги" class="btn btn-danger" />
+    </form>
+    <a href="@Url.Action("SaveAsXml", "Library")" class="btn btn-success">Сохранить все в XML</a>
+    <form id="uploadForm" method="post" enctype="multipart/form-data" action="@Url.Action("UploadFromXml", "Library")">
+        <input type="file" id="fileInput" name="file" class="form-control" style="display: none;" />
+        <button type="button" id="selectFileBtn" class="btn btn-info">Загрузить XML</button>
+        <button type="submit" id="uploadBtn" class="btn btn-primary" style="display: none;">Загрузить</button>
+    </form>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Описание</th>
+            <th>Кол-во</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Description</td>
+                <td>@book.Count</td>
+                <td><a href="Library/View/@book.Id">Открыть</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        document.getElementById("selectFileBtn").addEventListener("click", function () {
+            document.getElementById("fileInput").click();
+        });
+
+        document.getElementById("fileInput").addEventListener("change", function () {
+            document.getElementById("uploadBtn").click();
+        });
+    </script>
+}

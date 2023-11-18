@@ -1,0 +1,13 @@
+﻿@page
+@model lr1.Pages.Index1Model
+@{
+    ViewData["Title"] = "Hello, Artem!";
+}
+
+<div class="form-center">
+    <form method="post">
+        <input type="text" placeholder="Введите цЫфОрКи..." name="numbers" />
+        <button type="submit">Delaesh</button>
+    </form>
+    <p>Sum: @Model.Sum</p>
+</div>

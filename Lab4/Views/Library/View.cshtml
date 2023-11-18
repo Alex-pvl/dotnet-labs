@@ -1,0 +1,35 @@
+﻿@model Lab4.Models.UpdateBookViewModel
+@{
+    ViewData["Title"] = "\"" + Model.Title.ToString() + "\"";
+}
+
+<h2>Изменить книгу @ViewData["Title"]</h2>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" asp-for="Id">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Название</label>
+        <input type="text" class="form-control" asp-for="Title" minlength="1" maxlength="50">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Автор</label>
+        <input type="text" class="form-control" asp-for="Author" minlength="2" maxlength="50">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Описание</label>
+        <input type="text" class="form-control" asp-for="Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Количество экземпляров</label>
+        <input type="number" class="form-control" asp-for="Count" min="0">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Применить изменения</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Library">Удалить</button>
+</form>

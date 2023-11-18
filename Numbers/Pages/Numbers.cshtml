@@ -1,0 +1,23 @@
+﻿@page
+@model Numbers.Pages.NumbersModel
+@{
+    Layout = "_LayoutSecond";
+    ViewData["Title"] = "Список контактов";
+}
+
+@section Footer {
+    Лабораторная работа №2. Чуваки. Вариант 6. 2023
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="contacts-container">
+    @for (var i = 0; i < Model.contacts.Count; i++)
+    {
+        <div class="contact-card">
+            <h2>@Model.contacts[i].Name</h2>
+            <p>Телефон: @Model.contacts[i].Phone</p>
+            <p>Описание: @Model.contacts[i].Description</p>
+        </div>
+    }
+</div>
